@@ -86,7 +86,7 @@ if submitted:
         status, messages = mail.search(None, "ALL")
         email_uids = messages[0].split()
         emails = []
-        for uid in email_uids[:500]:  # limit to first 500 emails for responsiveness
+        for uid in email_uids[:50]:  # limit to first 500 emails for responsiveness
             status, msg_data = mail.fetch(uid, "(RFC822)")
             msg = email.message_from_bytes(msg_data[0][1])
             subject = msg["subject"] or ""
@@ -123,6 +123,7 @@ if 'emails' in locals() and emails:
 
     st.write(f"Within-cluster sum of squares (inertia): {inertia}")
     cluster_counts = dict(zip(*np.unique(labels, return_counts=True)))
+    cluster_counts = {int(k): int(v) for k, v in cluster_counts.items()}
     st.write("Cluster counts:", cluster_counts)
 
     # Topic modeling with LDA

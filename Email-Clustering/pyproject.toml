@@ -6,6 +6,8 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "beautifulsoup4>=4.13.5",
+    "gensim>=4.3.3",
     "nltk>=3.9.1",
+    "scikit-learn>=1.7.1",
     "streamlit>=1.49.1",
 ]
