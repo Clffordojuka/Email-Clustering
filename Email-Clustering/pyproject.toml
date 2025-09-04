@@ -4,4 +4,7 @@ version = "0.1.0"
 description = "Building an email clustering and topic modeling system using my inbox emails"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "beautifulsoup4>=4.13.5",
+    "nltk>=3.9.1",
+]
