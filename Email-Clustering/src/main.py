@@ -86,7 +86,7 @@ if submitted:
         status, messages = mail.search(None, "ALL")
         email_uids = messages[0].split()
         emails = []
-        for uid in email_uids[:50]:  # limit to first 500 emails for responsiveness
+        for uid in email_uids[:100]:  # limit to first 100 emails for responsiveness
             status, msg_data = mail.fetch(uid, "(RFC822)")
             msg = email.message_from_bytes(msg_data[0][1])
             subject = msg["subject"] or ""
@@ -114,7 +114,7 @@ if 'emails' in locals() and emails:
     X = vectorizer.fit_transform(cleaned_emails)
 
     # Clustering
-    num_clusters = st.slider("Number of clusters", min_value=2, max_value=10, value=5)
+    num_clusters = st.slider("Number of clusters", min_value=2, max_value=10, value=10)
     with st.spinner("Clustering emails..."):
         kmeans = KMeans(n_clusters=num_clusters, init='k-means++', n_init=10, max_iter=300, random_state=42)
         kmeans.fit(X)
