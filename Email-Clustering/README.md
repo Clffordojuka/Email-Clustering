@@ -4,6 +4,7 @@
 
 This project builds a comprehensive system for analyzing large collections of emails using natural language processing (NLP) and unsupervised machine learning techniques. It extracts and preprocesses email text data, applies clustering algorithms to group similar emails, performs topic modeling to discover underlying themes, and presents results through an interactive Streamlit dashboard with insightful visualizations.
 
+---
 ## Features
 
 - Connects to Gmail via IMAP to fetch emails securely.
@@ -15,6 +16,7 @@ This project builds a comprehensive system for analyzing large collections of em
 - Interactive dashboard to explore cluster sizes, topic keywords, and visualization dynamically.
 - Adjustable hyperparameters for vectorization and clustering for experimentation.
 
+---
 ## Technologies Used
 
 - Python 3.8+
@@ -23,6 +25,7 @@ This project builds a comprehensive system for analyzing large collections of em
 - Machine Learning: K-means clustering, LDA topic modeling
 - Visualization: t-SNE scatter plots, Streamlit interactive UI
 
+---
 ## Setup Instructions
 
 1. Clone the repository:
@@ -48,6 +51,7 @@ email_password = "your-app-password"
 streamlit run src/main.py
 
 
+---
 ## Usage
 
 - Upon launching, log in with your email credentials.
@@ -56,6 +60,7 @@ streamlit run src/main.py
 - Explore clusters on the 2D t-SNE visualization colored by cluster labels.
 - View top keywords for each LDA topic to understand content themes.
 
+---
 ## Project Structure
 
 - `.streamlit/` — Streamlit configuration and secrets
@@ -66,6 +71,13 @@ streamlit run src/main.py
 - `uv.lock` — UV package manager lock file
 - `README.md` — This file
 
+---
+## 📸 Screenshot
+
+![App Screenshot](screenshots/topic.PNG)
+![App Screenshot](screenshots/t-sne.PNG)
+
+---
 ## Future Work
 
 - Add sentiment analysis per cluster/topic.
@@ -73,6 +85,9 @@ streamlit run src/main.py
 - Implement real-time incremental clustering.
 - Improve UI with richer visualizations and export options.
 
+---
 ## Author
 
 Clifford Ojuka — Data Scientist / Machine Learning Engineer
+
+---

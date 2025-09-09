@@ -66,6 +66,11 @@ streamlit run src/main.py
 - `uv.lock` — UV package manager lock file
 - `README.md` — This file
 
+## 📸 Screenshot
+
+![App Screenshot](screenshots/topic.PNG)
+![App Screenshot](screenshots/t-sne.PNG)
+
 ## Future Work
 
 - Add sentiment analysis per cluster/topic.
